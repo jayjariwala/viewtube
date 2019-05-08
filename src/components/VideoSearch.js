@@ -4,10 +4,6 @@ import youtubeAPI from './api/youtubeAPI';
 
 export default class VideoSearch extends Component {
 
-    constructor() {
-        super();
-    }
-
     onFormSubmit = (event) => {
         event.preventDefault();
         const searchText = this.props.searchText;
@@ -27,7 +23,6 @@ export default class VideoSearch extends Component {
             .catch((err) => {
                 console.log(err);
             })
-
     }
 
     onChange = (e) => {

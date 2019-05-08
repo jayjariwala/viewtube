@@ -17,8 +17,8 @@ export default class Video extends Component {
          <li className="media" >
                 <img src={video.snippet.thumbnails.medium.url} width="150px" className="mr-3" alt="..." />
                 <div className="media-body">
-                <h5 className="mt-0 mb-1">{video.snippet.title}</h5>
-                {video.snippet.description}
+                <h5 className="mt-0 mb-1">{video.snippet.title.split(" ").length > 10 ? video.snippet.title.split(" ").slice(0,10).join(" ") + '...' : video.snippet.title }</h5>
+                {video.snippet.description.split(" ").length > 10 ? video.snippet.description.split(" ").slice(0,10).join(" ") + '...' : video.snippet.description }
                 </div>
             </li>
         </div>
@@ -29,8 +29,8 @@ export default class Video extends Component {
             <li className="media" >
                    <img src={video.snippet.thumbnails.medium.url} width="150px" className="mr-3" alt="..." />
                    <div className="media-body">
-                   <h5 className="mt-0 mb-1">{video.snippet.title}</h5>
-                   {video.snippet.description}
+                   <h5 className="mt-0 mb-1">{video.snippet.title.split(" ").length > 10 ? video.snippet.title.split(" ").slice(0,10).join(" ") : video.snippet.title }</h5>
+                   {video.snippet.description.split(" ").length > 10 ? video.snippet.description.split(" ").slice(0,10).join(" ") + '...' : video.snippet.description }
                    </div>
                </li>
            </div>

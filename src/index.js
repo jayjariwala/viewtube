@@ -53,6 +53,7 @@ class App extends Component {
 
   loadVideoList = (videoList) => {
     this.setState({
+      currentVideo:'',
       videoList
     })
   }
